@@ -15,3 +15,10 @@ function convert() {
 
   document.getElementById("preview").innerText = output;
 }
+
+function addToPhotoshop() {
+  const text = document.getElementById("preview").innerText;
+
+  const csInterface = new CSInterface();
+  csInterface.evalScript(`addText("${text}")`);
+}
